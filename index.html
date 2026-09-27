@@ -4,15 +4,188 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0a0a0c" />
-    <title>Pickdot — which image lands first</title>
-    <meta name="description" content="Two images in, a hedged pick out. Measured in your browser, judged against your audience." />
+
+    <title>Pickdot — Free Thumbnail A/B Testing Tool: Compare Two Images</title>
+    <meta
+      name="description"
+      content="A/B test two thumbnails or posts before you publish. Free attention heatmaps, text-size and contrast checks for YouTube, Instagram and ads. Runs in your browser, no upload."
+    />
+    <!-- One canonical home, so the GitHub and Hugging Face copies don't compete as duplicates. -->
+    <link rel="canonical" href="https://pickdot.pages.dev/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pickdot" />
+    <meta property="og:url" content="https://pickdot.pages.dev/" />
+    <meta property="og:title" content="Pickdot — A/B test your thumbnails before you post" />
+    <meta
+      property="og:description"
+      content="Two images in, a hedged pick out. Attention maps, text size at feed scale and contrast, measured free in your browser."
+    />
+    <meta property="og:image" content="https://pickdot.pages.dev/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pickdot compares two images with dot-matrix attention maps" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pickdot — A/B test your thumbnails before you post" />
+    <meta name="twitter:description" content="Attention maps, text size at feed scale and contrast for two images. Free, in your browser." />
+    <meta name="twitter:image" content="https://pickdot.pages.dev/og.jpg" />
+
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Pickdot",
+            "url": "https://pickdot.pages.dev/",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Any (runs in the browser)",
+            "browserRequirements": "Requires JavaScript and WebAssembly",
+            "description": "A free pre-publish A/B testing tool that compares two thumbnails or social images with attention heatmaps, text-size, contrast and face checks, weighted by your audience.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "featureList": [
+              "Side-by-side attention heatmaps",
+              "Text size at real feed scale",
+              "WCAG text contrast",
+              "Face size and expression",
+              "Visual clutter and palette",
+              "Audience-weighted, hedged verdict",
+              "Runs entirely in the browser; images are never uploaded"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is A/B testing?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A/B testing shows two versions of something — A and B — to different parts of the same audience and measures which one gets the better result, such as more clicks. It is the most reliable way to compare two options, but it needs enough traffic to reach a clear answer." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I A/B test a YouTube thumbnail?",
+                "acceptedAnswer": { "@type": "Answer", "text": "YouTube Studio's Test & Compare feature can rotate up to three thumbnails on a live video and report which one earned more watch time. Before that, a tool like Pickdot checks two options for legibility, contrast and where attention lands, so you only test candidates that are fit to post." }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Pickdot a replacement for a real A/B test?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Pickdot is a pre-publish check. Its measurements (text size, contrast, attention) are facts; its verdict is a directional nudge. Research on AI predictions of A/B tests finds the direction is right roughly 70% of the time, so about one pick in three is wrong. Pickdot says so, and says \"too close to call\" when it is." }
+              },
+              {
+                "@type": "Question",
+                "name": "Are my images uploaded?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Every measurement runs in your browser. Your images never leave your device." }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Pickdot free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no account, no upload and no usage limit." }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Static guide: readable by search engines without JavaScript, and useful to people. -->
+    <article class="guide" aria-labelledby="guide-title">
+      <header class="guide-head">
+        <p class="guide-kicker">Guide</p>
+        <h2 id="guide-title">A/B testing thumbnails and social images, without the traffic</h2>
+        <p class="guide-lede">
+          Pickdot is a free tool to compare two images before you post them. It measures what can be measured —
+          where attention lands, how big your text really renders, whether it has enough contrast — and gives an
+          honest, hedged pick for your audience.
+        </p>
+      </header>
+
+      <div class="guide-grid">
+        <section>
+          <h3>What is A/B testing?</h3>
+          <p>
+            An A/B test shows two versions of something to different slices of the same audience and measures which
+            one does better — more clicks, more watch time, more sign-ups. Version A is the control, version B the
+            challenger. Because both run at the same time for the same kind of people, the difference in results
+            comes from the change, not from luck or timing.
+          </p>
+          <p>
+            It is the most reliable way to settle "which one is better?" The catch is sample size: to tell a real
+            difference from noise you usually need thousands of impressions per version. A small difference needs
+            even more.
+          </p>
+        </section>
+
+        <section>
+          <h3>Why creators rarely get to run one</h3>
+          <p>
+            A single YouTube upload, Instagram post or ad often doesn't get enough views to finish a fair test, and
+            paid testing tools cost more than one post is worth. So most thumbnail decisions end up made by gut
+            feeling, a friend's opinion or a poll in a group chat. Pickdot is built to replace the group chat — not
+            the A/B test.
+          </p>
+        </section>
+
+        <section>
+          <h3>How Pickdot compares two images</h3>
+          <ul>
+            <li><strong>Attention map.</strong> A saliency model estimates where the eye lands first, shown side by side for A and B.</li>
+            <li><strong>Text size at feed scale.</strong> Your headline measured in real pixels at the size the platform shows it — for example a 320px-wide YouTube tile. Under 14px is hard to read.</li>
+            <li><strong>Contrast.</strong> WCAG contrast between your text and what's behind it. Under 3:1 fails for large text.</li>
+            <li><strong>Faces.</strong> Whether a face is present, how much of the frame it fills and its expression.</li>
+            <li><strong>Clutter and colour.</strong> Edge density, palette size, saturation and clipped highlights.</li>
+          </ul>
+          <p>
+            A short, readable rule set turns those numbers into a pick, weighted by the audience you describe once:
+            phone-first viewers weigh legibility more; "close-up faces do well" makes face size count double.
+          </p>
+        </section>
+
+        <section>
+          <h3>How accurate is it?</h3>
+          <p>
+            The measurements are facts. The verdict is a nudge. Published research on AI predictions of A/B tests
+            finds the direction is right about 70% of the time and the size of the difference is usually overstated.
+            So Pickdot never promises a percentage lift or a score out of 100. It says "more likely", states its
+            confidence in words, and says "too close to call" when the gap is inside noise.
+          </p>
+        </section>
+
+        <section>
+          <h3>When to run a real A/B test</h3>
+          <p>
+            When you have the traffic, test for real. YouTube Studio's <em>Test &amp; Compare</em> rotates up to three
+            thumbnails on a live video; Meta Ads Manager and Google Ads run split tests on creatives. Use Pickdot first
+            to drop options that fail on legibility or contrast, then test the two strongest. Log what happened in
+            Pickdot afterwards and you build your own hit rate over time.
+          </p>
+        </section>
+
+        <section>
+          <h3>Frequently asked</h3>
+          <dl>
+            <dt>Is it free?</dt>
+            <dd>Yes. No account, no upload, no limit.</dd>
+            <dt>Are my images uploaded?</dt>
+            <dd>No. Everything runs in your browser; the images never leave your device.</dd>
+            <dt>Which platforms does it support?</dt>
+            <dd>YouTube thumbnails, Instagram posts and stories, LinkedIn images and display ads.</dd>
+            <dt>Can it compare more than two images?</dt>
+            <dd>Not yet. Two is the decision most people actually face.</dd>
+          </dl>
+        </section>
+      </div>
+    </article>
   </body>
 </html>
