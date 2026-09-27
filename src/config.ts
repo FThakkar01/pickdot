@@ -4,7 +4,7 @@
  */
 
 /** Microsoft Clarity project id (clarity.microsoft.com → Settings → Overview). Empty = off. */
-export const CLARITY_ID: string = (import.meta.env.VITE_CLARITY_ID as string | undefined) || '';
+export const CLARITY_ID: string = (import.meta.env.VITE_CLARITY_ID as string | undefined) || 'yowprnmkxa';
 
 /**
  * ntfy.sh topic for owner push notifications. Subscribe to it in the ntfy app.
