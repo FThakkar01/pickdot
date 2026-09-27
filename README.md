@@ -28,3 +28,8 @@ npm run dev        # http://localhost:5288
 
 - Microsoft Clarity: set `CLARITY_ID` in `src/config.ts` (one project covers all hosts; filter by the `host` tag).
 - Owner push notifications: subscribe to the `NTFY_TOPIC` in `src/config.ts` with the ntfy app.
+
+## Licence
+
+© 2026 Freya Thakkar. All rights reserved. The source is visible for
+transparency only; see [LICENSE](LICENSE). No reuse without written permission.

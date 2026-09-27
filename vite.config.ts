@@ -7,6 +7,12 @@ export default defineConfig({
   base: './',
   plugins: [react()],
   worker: { format: 'es' },
+  build: {
+    rollupOptions: {
+      // Kept by minifiers (/*!), so copies of the live code carry the notice.
+      output: { banner: '/*! Pickdot (c) 2026 Freya Thakkar. All rights reserved. Unlicensed copying prohibited. */' },
+    },
+  },
   // Polling: file-change events are unreliable inside OneDrive folders.
   server: { port: 5288, strictPort: true, watch: { usePolling: true, interval: 300 } },
 });
