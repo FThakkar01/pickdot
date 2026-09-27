@@ -43,4 +43,4 @@ api.upload_folder(
     delete_patterns=["assets/*"],  # drop stale hashed bundles from earlier deploys
 )
 print(f"Live at https://huggingface.co/spaces/{repo_id}")
-print(f"Direct:  https://{user.lower()}-{SPACE}.hf.space")
+print(f"Direct:  https://{user.lower()}-{SPACE}.static.hf.space")
