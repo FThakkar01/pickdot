@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       // Kept by minifiers (/*!), so copies of the live code carry the notice.
-      output: { banner: '/*! Pickdot (c) 2026 Freya Thakkar. All rights reserved. Unlicensed copying prohibited. */' },
+      output: { banner: '/*! (c) 2026 Pickdot. All rights reserved. */' },
     },
   },
   // Polling: file-change events are unreliable inside OneDrive folders.

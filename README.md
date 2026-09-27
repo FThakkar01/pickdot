@@ -31,5 +31,4 @@ npm run dev        # http://localhost:5288
 
 ## Licence
 
-© 2026 Freya Thakkar. All rights reserved. The source is visible for
-transparency only; see [LICENSE](LICENSE). No reuse without written permission.
+© 2026 Pickdot. All rights reserved. See [LICENSE](LICENSE).

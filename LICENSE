@@ -1,15 +1,7 @@
-Copyright (c) 2026 Freya Thakkar. All rights reserved.
+Copyright (c) 2026 Pickdot. All rights reserved.
 
-This repository and the Pickdot application, including its source code,
-design, text, graphics and the "Pickdot" name and logo, are proprietary.
-
-The source is publicly visible for transparency only. No licence is granted
-to copy, modify, distribute, host, sublicense or create derivative works of
-any part of it, in whole or in part, for any purpose, without prior written
-permission from the copyright holder.
+The source is publicly visible, but no licence is granted to copy, modify,
+redistribute or host it without permission.
 
 Third-party components remain under their own licences (for example
-MediaPipe, Apache-2.0; React, MIT). Those licences apply only to those
-components, not to this work.
-
-For permission requests: freyathakkar1626@gmail.com
+MediaPipe, Apache-2.0; React, MIT).
